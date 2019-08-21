@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Widget">
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/pref_show_bass_default"
+            android:title="@string/show_bass_label"
+            android:summaryOff="@string/pref_show_false"
+            android:summaryOn="@string/pref_show_true"
+            android:key="@string/show_bass_key"/>
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/pref_show_mid_range_default"
+            android:title="@string/show_mid_range_label"
+            android:key="@string/show_mid_range_key"
+            android:summaryOn="@string/pref_show_true"
+            android:summaryOff="@string/pref_show_false"/>
+
+
+        <CheckBoxPreference
+            android:defaultValue="@bool/pref_show_treble_default"
+            android:title="@string/show_treble_label"
+            android:key="@string/show_treble_key"
+            android:summaryOn="@string/pref_show_true"
+            android:summaryOff="@string/pref_show_false"/>
+
+
+        <ListPreference
+            android:defaultValue="@string/pref_color_red_value"
+            android:entries="@array/pref_color_labels"
+            android:entryValues="@array/pref_color_values"
+            android:key="@string/pref_color_key"
+            android:summary="@string/shape_color_summary"
+            android:title="@string/pref_color_label"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+
+        <Preference
+            android:enabled="false"
+            android:key="app_name_key"
+            android:summary="Visualizer App"
+            android:title="App Name" />
+
+        <Preference
+            android:enabled="false"
+            android:key="app_version"
+            android:summary="1.0.0"
+            android:title="Version" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
